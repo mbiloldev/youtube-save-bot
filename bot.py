@@ -2,12 +2,7 @@ import asyncio
 import os
 import logging
 from aiogram import Bot, Dispatcher, types
-from aiogram.filters import CommandStart, Command
-from aiogram.types import Message, FSInputFile
-from dotenv import load_dotenv
-from downloader import download_instagram_video
-import tempfile
-
+from ai
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
