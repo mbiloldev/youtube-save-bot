@@ -5,11 +5,6 @@ import os
 def download_instagram_video(url: str, output_dir: str) -> str | None:
     output_template = os.path.join(output_dir, "%(title).50s.%(ext)s")
 
-    ydl_opts = {
-        "outtmpl": output_template,
-        "format": "mp4/best[ext=mp4]/best",
-        "quiet": True,
-        "no_warnings": True,
         # Instagram login talab qilsa, cookies.txt faylini bot papkasiga qo'ying
         # "cookiefile": "cookies.txt",
     }
