@@ -19,7 +19,6 @@ def download_instagram_video(url: str, output_dir: str) -> str | None:
             info = ydl.extract_info(url, download=True)
             file_path = ydl.prepare_filename(info)
 
-            if os.path.exists(file_path):
                 return file_path
 
             # Fayl boshqa kengaytmada saqlangan bo'lishi mumkin
