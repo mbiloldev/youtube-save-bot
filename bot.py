@@ -32,8 +32,6 @@ async def cmd_start(message: Message):
         "men uni yuklab, sizga yuboraman.\n\n"
         "📌 Misol:\n"
         "https://www.instagram.com/reel/ABC123/\n\n"
-        "ℹ️ Yordam: /help"
-    )
 
 
 @dp.message(Command("help"))
