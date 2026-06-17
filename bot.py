@@ -2,16 +2,6 @@ import asyncio
 import os
 import logging
 from aiogram import Bot, Dispatcher, types
-from ai
-load_dotenv()
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-
-if
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-)
-logger = logging.getLogger(__name__)
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
