@@ -2,6 +2,23 @@ import asyncio
 import os
 import logging
 from aiogram import Bot, Dispatcher, types
+from aiogram.filters import CommandStart, Command
+from aiogram.types import Message, FSInputFile
+from dotenv import load_dotenv
+from downloader import download_instagram_video
+import tempfile
+
+load_dotenv()
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN topilmadi! .env faylini tekshiring.")
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+logger = logging.getLogger(__name__)
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
@@ -15,6 +32,8 @@ async def cmd_start(message: Message):
         "men uni yuklab, sizga yuboraman.\n\n"
         "📌 Misol:\n"
         "https://www.instagram.com/reel/ABC123/\n\n"
+        "ℹ️ Yordam: /help"
+    )
 
 
 @dp.message(Command("help"))
