@@ -6,9 +6,7 @@ from ai
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-if not BOT_TOKEN:
-    raise ValueError("BOT_TOKEN topilmadi! .env faylini tekshiring.")
-
+if
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
