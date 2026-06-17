@@ -3,16 +3,7 @@ import os
 
 
 def download_instagram_video(url: str, output_dir: str) -> str | None:
-    output_template = os.path.join(output_dir, "%(title).50s.%(ext)s")
 
-        # Instagram login talab qilsa, cookies.txt faylini bot papkasiga qo'ying
-        # "cookiefile": "cookies.txt",
-    }
-
-    try:
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info = ydl.extract_info(url, download=True)
-            file_path = ydl.prepare_filename(info)
 
                 return file_path
 
